@@ -7,7 +7,7 @@
       "iam_instance_profile": "rtt-jenkins-packer-role",
       "instance_type": "t2.medium",
       "ssh_username": "ubuntu",
-      "ami_name": "jenkins-rtt-{{isotime \"2006-01-02T1504\"}}",
+      "ami_name": "jenkins-training10-{{isotime \"2006-01-02T1504\"}}",
       "launch_block_device_mappings": [
         {
           "device_name": "/dev/sda1",
@@ -25,7 +25,7 @@
         "sleep 30",
         "sudo apt-get update --fix-missing",
         "sudo apt-get install -y python",
-        "sudo wget -q http://nexus.roundtower.io:8081/repository/rtt-release/apps/add2vals/1.0/add2vals-1.0",
+        "sudo wget -q http://nexus.roundtower.io:8081/repository/training10-release/apps/add2vals/1.0/add2vals-1.0",
         "sudo mv add2vals-1.0 /usr/local/bin/add2vals",
         "sudo chmod 777 /usr/local/bin/add2vals"
       ]
